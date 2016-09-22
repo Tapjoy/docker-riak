@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  riak:
+    image: tapjoy/docker-riak
+    networks:
+      - development
+    volumes:
+      - riak:/var/lib/riak
+
+networks:
+  development:
+    external: true
+
+volumes:
+  riak:
