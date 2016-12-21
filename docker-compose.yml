@@ -5,12 +5,12 @@ services:
   riak:
     image: tapjoy/docker-riak
     networks:
-      - development
+      tapjoy.localdev:
     volumes:
       - riak:/var/lib/riak
 
 networks:
-  development:
+  tapjoy.localdev:
     external: true
 
 volumes:
